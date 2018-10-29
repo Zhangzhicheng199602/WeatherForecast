@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>中国天气</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/WeatherForecast.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/WeatherForecast.js"></script>
+</head>
+<body>
+	
+	<!-- 页面背景 -->
+	<div id="interfaceBackground">
+
+		<!-- 页面主体 -->
+		<div id="interface">
+
+			<!-- 导航栏 -->
+			<div id="navigationBar">
+				
+				<!-- 标题 -->
+				<div id="title">中国天气</div>
+
+				<!-- 位置 -->
+				<div id="position">
+
+					<!-- 图标 -->
+					<div id="icon">&#xe652;</div>
+
+					<!-- 城市 -->
+					<div id="city">北京</div>
+				</div>
+
+				<div id="state"></div>
+			</div>
+
+			<!-- 下拉列表 -->
+			<div id="dropDownMenu">
+				<div class="lineStyle">
+					<div id="city1" class="cellStyle1" value="北京" onclick="choose(1)">北京</div>
+					<div id="city2" class="cellStyle1" value="天津" onclick="choose(2)">天津</div>
+					<div id="city3" class="cellStyle1" value="上海" onclick="choose(3)">上海</div>
+					<div id="city4" class="cellStyle1" value="重庆" onclick="choose(4)">重庆</div>
+					<div id="city5" class="cellStyle1" value="石家庄" onclick="choose(5)">河北(石家庄)</div>
+					<div id="city6" class="cellStyle2" value="太原" onclick="choose(6)">山西(太原)</div>
+				</div>
+				<div class="lineStyle">
+					<div id="city7" class="cellStyle1" value="沈阳" onclick="choose(7)">辽宁(沈阳)</div>
+					<div id="city8" class="cellStyle1" value="长春" onclick="choose(8)">吉林(长春)</div>
+					<div id="city9" class="cellStyle1" value="哈尔滨" onclick="choose(9)">黑龙江(哈尔滨)</div>
+					<div id="city10" class="cellStyle1" value="南京" onclick="choose(10)">江苏(南京)</div>
+					<div id="city11" class="cellStyle1" value="杭州" onclick="choose(11)">浙江(杭州)</div>
+					<div id="city12" class="cellStyle2" value="合肥" onclick="choose(12)">安徽(合肥)</div>
+				</div>
+				<div class="lineStyle">
+					<div id="city13" class="cellStyle1" value="福州" onclick="choose(13)">福建(福州)</div>
+					<div id="city14" class="cellStyle1" value="南昌" onclick="choose(14)">江西(南昌)</div>
+					<div id="city15" class="cellStyle1" value="济南" onclick="choose(15)">山东(济南)</div>
+					<div id="city16" class="cellStyle1" value="郑州" onclick="choose(16)">河南(郑州)</div>
+					<div id="city17" class="cellStyle1" value="武汉" onclick="choose(17)">湖北(武汉)</div>
+					<div id="city18" class="cellStyle2" value="长沙" onclick="choose(18)">湖南(长沙)</div>
+				</div>
+				<div class="lineStyle">
+					<div id="city19" class="cellStyle1" value="广州" onclick="choose(19)">广东(广州)</div>
+					<div id="city20" class="cellStyle1" value="海口" onclick="choose(20)">海南(海口)</div>
+					<div id="city21" class="cellStyle1" value="成都" onclick="choose(21)">四川(成都)</div>
+					<div id="city22" class="cellStyle1" value="贵阳" onclick="choose(22)">贵州(贵阳)</div>
+					<div id="city23" class="cellStyle1" value="昆明" onclick="choose(23)">云南(昆明)</div>
+					<div id="city24" class="cellStyle2" value="西安" onclick="choose(24)">陕西(西安)</div>
+				</div>
+				<div class="lineStyle">
+					<div id="city25" class="cellStyle1" value="兰州" onclick="choose(25)">甘肃(兰州)</div>
+					<div id="city26" class="cellStyle1" value="西宁" onclick="choose(26)">青海(西宁)</div>
+					<div id="city27" class="cellStyle1" value="台北" onclick="choose(27)">台湾(台北)</div>
+					<div id="city28" class="cellStyle1" value="银川" onclick="choose(28)">宁夏(银川)</div>
+					<div id="city29" class="cellStyle1" value="香港" onclick="choose(29)">香港</div>
+					<div id="city30" class="cellStyle2" value="澳门" onclick="choose(30)">澳门</div>
+				</div>
+				<div class="lineStyle">
+					<div id="city31" class="cellStyle1"" value="南宁" onclick="choose(31)">广西(南宁)</div>
+					<div id="city32" class="cellStyle1"" value="拉萨" onclick="choose(32)">西藏(拉萨)</div>
+					<div id="city33" class="cellStyle1"" value="乌鲁木齐" onclick="choose(33)">新疆(乌鲁木齐)</div>
+					<div id="city34" class="cellStyle3" value="呼和浩特" onclick="choose(34)">内蒙古(呼和浩特)</div>
+				</div>
+			</div>
+
+			<!-- 内容 -->
+			<div id="content">
+				<div id="day1">
+					<div id="releaseTime"></div>
+					<div id="date1"></div>
+					<div id="icon1"></div>
+					<div id="realTime">
+						<div id="realTimeLeft"></div>
+						<div id="realTimeRight">
+							<div id="up"></div>
+							<div id="down"></div>
+						</div>
+					</div>
+					<div id="information1">
+						<div id="temperature1"></div>
+						<div id="humidity"></div>
+					</div>
+					<div id="information2">
+						<div id="weather1"></div>
+						<div id="wind1"></div>
+					</div>
+					<div id="aqi"></div>
+					<div id="suggest"></div>
+				</div>
+				<div id="day2" class="dayStyle">
+					<div id="date2" class="dateStyle"></div>
+					<div id="icon2" class="iconStyle"></div>
+					<div id="temperature2" class="format"></div>
+					<div id="weather2" class="format"></div>
+					<div id="wind2" class="format"></div>
+				</div>
+				<div id="day3" class="dayStyle">
+					<div id="date3" class="dateStyle"></div>
+					<div id="icon3" class="iconStyle"></div>
+					<div id="temperature3" class="format"></div>
+					<div id="weather3" class="format"></div>
+					<div id="wind3" class="format"></div>
+				</div>
+				<div id="day4" class="dayStyle">
+					<div id="date4" class="dateStyle"></div>
+					<div id="icon4" class="iconStyle"></div>
+					<div id="temperature4" class="format"></div>
+					<div id="weather4" class="format"></div>
+					<div id="wind4" class="format"></div>
+				</div>
+				<div id="day5" class="dayStyle">
+					<div id="date5" class="dateStyle"></div>
+					<div id="icon5" class="iconStyle"></div>
+					<div id="temperature5" class="format"></div>
+					<div id="weather5" class="format"></div>
+					<div id="wind5" class="format"></div>
+				</div>
+				<div id="lineChart">
+					<canvas id="myCanvas" width="910px" height="165px" border-radius="10px"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- <script type="text/javascript" src="js/WeatherForecast.js"></script> -->
+</html>
